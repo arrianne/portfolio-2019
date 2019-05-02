@@ -64,10 +64,11 @@ h2 {
 .title_fullstop{
   width: 30px;
   height: 30px;
-  background: #36c9c6;
+
   border-radius: 50%;
   align-self: center;
   margin: 20px 0 0 10px;
+  animation: colorchange 10s infinite;
 }
 .title-box {
   height: 500px;
@@ -83,6 +84,19 @@ h2 {
 }
 .right {
   background: white;
+}
+
+/* For mobile phones: */
+@keyframes colorchange {
+  0% {
+    background: #36c9c6;
+  }
+  50% {
+    background: #bc9ec1;
+  }
+  100% {
+    background: #36c9c6;
+  }
 }
 
 /* For mobile phones: */
