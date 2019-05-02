@@ -14,17 +14,22 @@ html, body {
   font-family: 'Archivo Black', sans-serif;
   margin: 0 10px 100px 0;
   font-family: 'Sofia', cursive;
+  height: 100px;
 }
 .scroll-arrow {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .arrow {
-  border: solid #34435e;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  color: #34435e;
+    border: solid #34435e;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    color: #34435e;
+    height: 5px;
+    width: 5px;
 }
 .down {
   transform: rotate(45deg);
@@ -37,11 +42,12 @@ html, body {
   margin: 0 auto;
 }
 h2 {
-  font-size: 25px;
+  font-size: 18px;
   text-orientation: sideways;
   writing-mode: vertical-rl;
   color: #34435e;
   margin: 0 0 20px 0;
+  animation: slide 1s ease-in-out infinite;
 }
 .title {
   display: flex;
@@ -98,6 +104,18 @@ h2 {
     background: #36c9c6;
   }
 }
+@keyframes slide {
+  0% {
+    margin-bottom: 20px;
+  }
+  50% {
+    margin-bottom: 30px;
+  }
+  100% {
+    margin-bottom: 20px;
+  }
+}
+
 
 /* For mobile phones: */
 /* @media only screen and (max-width: 768px) {
