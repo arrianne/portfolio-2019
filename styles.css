@@ -1,0 +1,46 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+.title {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+    align-self: center;
+    z-index: 2;
+    position: absolute;
+    left: 36%;
+    line-height: 90px;
+    color: #34435e;
+    font-size: 100px;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+}
+.title_fullstop{
+  width: 30px;
+  height: 30px;
+  background: #36c9c6;
+  border-radius: 50%;
+  margin: 10px;
+  align-self: flex-end;
+}
+.title-box {
+  height: 500px;
+  width: 50%;
+  z-index: 1;
+  height: 100%;
+}
+.left {
+background: #dbe9ee;
+}
+.right {
+background: white;
+}
