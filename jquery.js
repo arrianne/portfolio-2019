@@ -11,4 +11,12 @@ $( document ).ready(function() {
       return false;
     });
 
+  $('.title-box').scroll(function() {
+      console.log('Event Fired');
+      $(this).css({
+        'width' : '100%',
+        'transition' : '0.4s'
+      });
+    });
+
 });
