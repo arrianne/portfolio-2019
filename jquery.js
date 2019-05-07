@@ -7,6 +7,7 @@ $( document ).ready(function() {
 
     $('.burger-menu').click(function(){
       $(this).toggleClass('active');
+      $(".header").toggleClass("header-active");
       return false;
     });
 
