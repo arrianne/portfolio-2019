@@ -12,6 +12,10 @@ html, body {
     margin: 0;
 }
 
+p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
 /*///////////////// Navigation menu */
 
 .header {
@@ -232,14 +236,75 @@ ul {
       align-items: center;
       padding: 30px;
       p {
-        border-left: 2px solid white;
+        border-left: 1px solid white;
         padding-left: 60px;
         color: $pale-blue;
-        font-size: 20px;
+
       }
     }
   }
 }
+
+/*///////////////// Section three */
+
+.three {
+  .left {
+    width: 100%;
+    background: $pale-blue;
+    height: 100vh;
+
+    .care {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: $purple;
+    }
+    p {
+      font-size: 18px;
+      color: $dark-blue;
+    }
+  }
+}
+
+/*///////////////// Section four */
+
+.four {
+  display: flex;
+
+  .title {
+    color: $pale-blue;
+    max-width: 450px;
+    left: 500px;
+    align-self: center;
+  }
+  .title-box {
+    width: 50%;
+    background: $dark-blue;
+  }
+
+  .left {
+    .about-container {
+      display: flex;
+      align-items: center;
+      padding: 30px;
+      p {
+        border-left: 1px solid white;
+        padding-left: 60px;
+        color: $pale-blue;
+
+      }
+    }
+  }
+}
+
 
 
 /*///////////////// sliding text */
@@ -360,12 +425,16 @@ ul {
         padding: 0 40px;
         p {
           border-left: 0;
-          border-top: 2px solid white;
-          font-size: 16px;
+          border-top: 1px solid white;
           padding-top: 30px;
           padding-left: 0;
         }
       }
+    }
+  }
+  .three {
+    .left {
+      flex-direction: column;
     }
   }
 }
