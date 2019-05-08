@@ -1,17 +1,26 @@
+$dark-blue: #34435e;
+$pale-blue: #dbe9ee;
+$dark-torquoise: #1f5673;
+$pale-torquoise: #36c9c6;
+$purple: #bc9ec1;
+
+
+
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
-/* Navigation menu */
+/*///////////////// Navigation menu */
+
 .header {
   position: absolute;
   width: 70%;
   height: 100vh;
-  background-color: #36c9c6;
+  background-color: $pale-torquoise;
   z-index: 3;
-  left: -900px;
+  left: -1000px;
   transition: 1s;
 }
 
@@ -33,6 +42,8 @@ ul {
   transition: 1s;
 }
 
+/*///////////////// Burger */
+
 .burger-menu {
   display: inline-block;
   cursor: pointer;
@@ -44,7 +55,7 @@ ul {
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #34435e;
+  background-color: $dark-blue;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -64,7 +75,8 @@ ul {
   transform: rotate(45deg) translate(-8px, -8px);
   background-color: white;
 }
-/* Navigation menu */
+
+/*///////////////// General section */
 
 .section {
   display: flex;
@@ -73,7 +85,8 @@ ul {
   position: relative;
 }
 
-// All titles
+/*///////////////// All titles */
+
 .title {
   display: flex;
   flex-direction: row;
@@ -105,9 +118,11 @@ ul {
   animation: colorchange 10s infinite;
 }
 
+/*///////////////// Section one */
 
-// Section one
 .one {
+
+  /*///////////////// scroll arrow */
   .scroll {
     z-index: 2;
     font-family: 'Archivo Black', sans-serif;
@@ -122,11 +137,11 @@ ul {
     align-items: center;
   }
   .arrow {
-      border: solid #34435e;
+      border: solid $dark-blue;
       border-width: 0 1px 1px 0;
       display: inline-block;
       padding: 3px;
-      color: #34435e;
+      color: $dark-blue;
       height: 5px;
       width: 5px;
   }
@@ -137,24 +152,24 @@ ul {
   .line {
     width: 2px;
     height: 20px;
-    background: #34435e;
+    background: $dark-blue;
     margin: 0 auto;
   }
+  /*/////////////////////////////*/
   h2 {
     font-size: 18px;
     text-orientation: sideways;
     writing-mode: vertical-rl;
-    color: #34435e;
+    color: $dark-blue;
     margin: 0 0 20px 0;
     animation: slide 1s ease-in-out infinite;
   }
   .title {
     align-self: center;
-    color: #34435e;
+    color: $dark-blue;
   }
-
   .left {
-    background: #dbe9ee;
+    background: $pale-blue;
     justify-content: flex-end;
     align-items: flex-end;
     width: 50%;
@@ -166,19 +181,22 @@ ul {
 
 }
 
+/*///////////////// full stop colour change */
 
-/* For mobile phones: */
 @keyframes colorchange {
   0% {
-    background: #36c9c6;
+    background: $pale-torquoise;
   }
   50% {
-    background: #bc9ec1;
+    background: $purple;
   }
   100% {
-    background: #36c9c6;
+    background: $pale-torquoise;
   }
 }
+
+/*///////////////// Scroll arrow */
+
 @keyframes slide {
   0% {
     margin-bottom: 20px;
@@ -191,38 +209,49 @@ ul {
   }
 }
 
-
-// Section two
+/*///////////////// Section two */
 
 .two {
   display: flex;
 
   .title {
     max-width: 450px;
-    color: #dbe9ee;
+    color:$pale-blue;
     right: 500px;
     align-self: center;
   }
   .left {
-    background: #34435e;
+    background: $dark-blue;
     width: 100%;
-  }
-  .right {
-    // width: 60%;
-    // .banana-phone {
-    //   opacity: 0.4;
-    //   width: 100%;
-    // }
   }
 }
 
 
+/*///////////////// Mobile */
 
-
-/* For mobile phones: */
-/* @media only screen and (max-width: 768px) {
-
+@media only screen and (max-width: 768px) {
   .title {
-  font-size: 200px;
+    line-height: 60px;
+    font-size: 80px;
   }
-} */
+  .title_fullstop {
+    width: 20px;
+    height: 20px;
+  }
+  .one {
+    .title {
+      left: 18%;
+    }
+  }
+  .two {
+    .title {
+      max-width: 450px;
+      color: #dbe9ee;
+      display: flex;
+      right: 0;
+      margin-top: 80px;
+      justify-content: center;
+      align-self: flex-start;
+    }
+  }
+}
