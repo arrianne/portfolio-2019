@@ -304,7 +304,7 @@ ul {
       border-left: 1px solid white;
       border-bottom: 1px solid white;
 
-      .skills {
+      .skills-list {
         display: flex;
         align-items: flex-end;
         width: 40px;
@@ -313,11 +313,11 @@ ul {
         background: #bc9ec1;
         z-index: 3;
       }
-      .css {
-        height: 20%;
+      .skill {
         width: 100%;
         background: $pale-blue;
       }
+
     }
   }
 }

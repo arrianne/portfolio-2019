@@ -12,21 +12,43 @@ $( document ).ready(function() {
     });
 
   $('.title-box').scroll(function() {
-      console.log('Event Fired');
       $(this).css({
         'width' : '100%',
         'transition' : '0.4s'
       });
     });
 
-//keeping the burger menu at the top
-    var $nav = $('.burger-menu'),
-      posTop = $nav.position().top;
-  $(window).scroll(function () {
-    console.log("hiiii")
-    var y = $(this).scrollTop();
-    if (y > posTop) { $nav.addClass('fixed'); }
-    else { $nav.removeClass('fixed'); }
+
+
+  $(window).scroll(function(){
+      // Function used to detect if the element is scrolled into view
+      function elementScrolled(elem)
+      {
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+          var elemTop = $(elem).offset().top;
+          return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+      }
+
+      // skill level - css
+      if(elementScrolled('.css')) {
+        console.log('Event Fired');
+          $('.css').stop().animate({height: "90%"},400,"swing");
+          $('.html').stop().animate({height: "60%"},400,"swing");
+          $('.javascript').stop().animate({height: "80%"},400,"swing");
+          $('.adobe').stop().animate({height: "40%"},400,"swing");
+
+      } else {
+          $('.css').stop().animate({height: "0%"},400,"swing");
+          $('.html').stop().animate({height: "0%"},400,"swing");
+          $('.css').stop().animate({height: "0%"},400,"swing");
+          $('.html').stop().animate({height: "0%"},400,"swing");
+
+      }
+
   });
+
+
+
 
 });
