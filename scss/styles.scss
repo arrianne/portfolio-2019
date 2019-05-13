@@ -437,4 +437,13 @@ ul {
       flex-direction: column;
     }
   }
+  .four {
+    flex-direction: column;
+    .left {
+      width: 100%;
+    }
+    .title {
+      left: 0;
+    }
+  }
 }
