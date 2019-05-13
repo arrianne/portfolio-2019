@@ -19,4 +19,14 @@ $( document ).ready(function() {
       });
     });
 
+//keeping the burger menu at the top
+    var $nav = $('.burger-menu'),
+      posTop = $nav.position().top;
+  $(window).scroll(function () {
+    console.log("hiiii")
+    var y = $(this).scrollTop();
+    if (y > posTop) { $nav.addClass('fixed'); }
+    else { $nav.removeClass('fixed'); }
+  });
+
 });
