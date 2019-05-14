@@ -501,8 +501,14 @@ ul {
         }
       }
     }
-    .title {
-      left: 0;
+    .title-box {
+      width: 100%;
+      justify-content: center;
+      .title {
+        position: relative;
+        left: 0;
+      }
     }
+
   }
 }
