@@ -253,7 +253,7 @@ ul {
 .three {
   .left {
     width: 100%;
-    background: $pale-blue;
+    background: white;
     height: 100vh;
 
     .care {
@@ -294,15 +294,40 @@ ul {
   }
 
   .left {
+    flex-direction: column;
+    justify-content: center;
+    .about-descriptions {
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      width: 60%;
+      height: 50px;
+      margin-top: 20px;
+      border: 0;
+      .skills-description{
+        background: none;
+        display: flex;
+        width: 40px;
+        height: 100px;
+        margin: 0 20px;
+        .skill {
+          align-self: flex-start;
+          text-orientation: sideways;
+          writing-mode: vertical-rl;
+          color: $pale-blue;
+          font-family: 'Lora', serif;
+        }
+      }
+    }
     .about-container {
       display: flex;
+      justify-content: space-between;
       align-self: center;
-      width: 100%;
+      width: 60%;
       height: 500px;
-      margin: 40px;
+      margin-top: 40px;
       align-items: center;
-      border-left: 1px solid white;
-      border-bottom: 1px solid white;
+      border: 0;
 
       .skills-list {
         display: flex;
@@ -312,13 +337,20 @@ ul {
         margin: 0 20px;
         background: #bc9ec1;
         z-index: 3;
+        .skill {
+          width: 100%;
+          background: $pale-blue;
+        }
+        .skills-description{
+          display: flex;
+          width: 40px;
+          height: 100px;
+          margin: 0 20px;
+          background: #bc9ec1;
+        }
       }
-      .skill {
-        width: 100%;
-        background: $pale-blue;
-      }
-
     }
+
   }
 }
 
@@ -458,6 +490,16 @@ ul {
     flex-direction: column;
     .left {
       width: 100%;
+      .about-container {
+        height: 300px;
+        .skills-list {
+          height: 300px;
+        }
+        .skill {
+          width: 100%;
+          background: $pale-blue;
+        }
+      }
     }
     .title {
       left: 0;
