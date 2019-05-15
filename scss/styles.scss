@@ -16,6 +16,13 @@ p {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
 }
+
+h1 {
+  font-family: 'Khula', sans-serif;
+  text-transform: uppercase;
+  color: $pale-torquoise;
+}
+
 /*///////////////// Navigation menu */
 
 .header {
@@ -252,12 +259,14 @@ ul {
 
 .three {
   .left {
+    justify-content: center;
     width: 100%;
     background: white;
     height: 100vh;
 
     .care {
       padding: 30px;
+      max-width: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -265,10 +274,10 @@ ul {
       text-align: center;
     }
     .icon {
-      width: 50px;
-      height: 50px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      background: $purple;
+      background: $pale-torquoise;
     }
     p {
       font-size: 18px;
@@ -354,7 +363,28 @@ ul {
   }
 }
 
+/*///////////////// Section five */
 
+.five {
+  .title-box {
+    align-items: center;
+  }
+  .title {
+    color: $dark-blue;
+    top: 100px;
+    margin-top: 20px;
+  }
+  .work {
+    p {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
 
 /*///////////////// sliding text */
 
@@ -510,5 +540,12 @@ ul {
       }
     }
 
+    .five {
+      .title-box {
+
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
   }
 }
