@@ -375,6 +375,10 @@ ul {
     margin-top: 20px;
   }
   .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     p {
       padding: 30px;
       display: flex;
@@ -382,6 +386,11 @@ ul {
       justify-content: center;
       align-items: center;
       text-align: center;
+    }
+    .work-icon {
+      width: 200px;
+      height: 200px;
+
     }
   }
 }
