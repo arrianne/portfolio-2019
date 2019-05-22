@@ -109,9 +109,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 400px;
   z-index: 2;
-  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
@@ -184,6 +182,8 @@ ul {
   .title {
     align-self: center;
     color: $dark-blue;
+    position: absolute;
+    max-width: 400px;
   }
   .left {
     background: $pale-blue;
@@ -372,17 +372,25 @@ ul {
 .five {
   .title-box {
     align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 100%;
   }
   .title {
     color: $dark-blue;
     top: 100px;
-    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+
   }
   .work {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 30%;
     p {
       padding: 30px;
       display: flex;
@@ -568,7 +576,12 @@ ul {
   /*///////////////// section five */
   .five {
     .title-box {
-      flex-direction: column;
+      .title {
+        margin: 100px 50px;
+      }
+      .work {
+        width: 100%;
+      }
     }
   }
 }
