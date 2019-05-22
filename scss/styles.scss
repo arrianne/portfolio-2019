@@ -23,6 +23,10 @@ h1 {
   color: $pale-torquoise;
 }
 
+.title-box {
+  overflow: hidden;
+}
+
 /*///////////////// Navigation menu */
 
 .header {
@@ -469,6 +473,9 @@ ul {
 /*///////////////// Mobile */
 
 @media only screen and (max-width: 768px) {
+  .title-box {
+    overflow: auto;
+  }
   .title {
     line-height: 60px;
     font-size: 80px;
@@ -477,11 +484,14 @@ ul {
     width: 20px;
     height: 20px;
   }
+  /*///////////////// section one */
+
   .one {
     .title {
       left: 18%;
     }
   }
+  /*///////////////// section two */
   .two {
       flex-direction: column;
     .title {
@@ -520,13 +530,26 @@ ul {
       }
     }
   }
+  /*///////////////// section three */
   .three {
+    .title-box {
+      justify-content: space-between;
+      align-items: center;
+    }
     .left {
       flex-direction: column;
     }
   }
+  /*///////////////// section four */
   .four {
     flex-direction: column;
+    .title-box {
+      width: 100%;
+      .title {
+        position: relative;
+        left: 0;
+      }
+    }
     .left {
       width: 100%;
       .about-container {
@@ -540,21 +563,12 @@ ul {
         }
       }
     }
+  }
+
+  /*///////////////// section five */
+  .five {
     .title-box {
-      width: 100%;
-      justify-content: center;
-      .title {
-        position: relative;
-        left: 0;
-      }
-    }
-
-    .five {
-      .title-box {
-
-        justify-content: center;
-        flex-direction: column;
-      }
+      flex-direction: column;
     }
   }
 }
