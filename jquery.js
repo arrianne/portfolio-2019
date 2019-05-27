@@ -2,6 +2,17 @@ $( document ).ready(function() {
 
     console.log("hello");
 
+    // Adding background to burger menu on scroll
+
+    $(window).scroll(function(){
+      	var scroll = $(window).scrollTop();
+    	  if (scroll > 300) {
+    	    $(".burger-menu_container").css("background" , "#36c9c6");
+    	  }
+    	  else{
+    		  $(".burger-menu_container").css("background" , "none");
+    	  }
+      })
 
     // should start at 0
 
