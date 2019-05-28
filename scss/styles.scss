@@ -348,7 +348,7 @@ ul {
     .about-container {
       display: flex;
       justify-content: space-between;
-      align-self: center;
+
       width: 60%;
       height: 500px;
       margin-top: 40px;
@@ -416,6 +416,27 @@ ul {
       width: 200px;
       height: 200px;
 
+    }
+  }
+}
+
+/*///////////////// Section six */
+
+.six {
+  background-color: $dark-blue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title-box {
+    width: 100%;
+    .title {
+      color: $pale-blue;
+    }
+  }
+  .contact-container {
+    .contact {
+      width: 120px;
+      margin: 40px 0;
     }
   }
 }
@@ -494,9 +515,11 @@ ul {
 /*///////////////// Mobile */
 
 @media only screen and (max-width: 768px) {
+
   .title-box {
     overflow: auto;
   }
+
   .title {
     line-height: 60px;
     font-size: 80px;
@@ -566,6 +589,7 @@ ul {
     flex-direction: column;
     .title-box {
       width: 100%;
+      overflow: hidden;
       .title {
         position: relative;
         left: 0;
@@ -573,10 +597,11 @@ ul {
     }
     .left {
       width: 100%;
+      align-items: center;
       .about-container {
         height: 300px;
         .skills-list {
-          height: 300px;
+          height: 200px;
         }
         .skill {
           width: 100%;
