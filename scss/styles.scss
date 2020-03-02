@@ -130,11 +130,12 @@ ul {
   padding: 50px;
 }
 
-.title_fullstop{
+.title_fullstop {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   animation: colorchange 10s infinite;
+  margin-left: 10px;
 }
 
 /*///////////////// Section one */
@@ -247,21 +248,21 @@ ul {
   .title-box {
     width: 50%;
     background: $dark-blue;
+
   }
   .left {
     flex-direction: column;
     justify-content: center;
   }
   .right {
+    display: flex;
+    align-items: center;
     .about-container {
       display: flex;
       align-items: center;
-      padding: 30px;
+      height: 200px;
       p {
-        border-left: 1px solid white;
-        padding-left: 60px;
         color: $pale-blue;
-
       }
     }
   }
@@ -449,7 +450,6 @@ ul {
   font-family: 'Lora', serif;
   text-transform: lowercase;
   z-index: 2;
-  height: 50px;
 }
 
 .slidingVertical span {

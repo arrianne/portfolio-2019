@@ -102,7 +102,8 @@ ul {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  animation: colorchange 10s infinite; }
+  animation: colorchange 10s infinite;
+  margin-left: 10px; }
 
 /*///////////////// Section one */
 .one {
@@ -189,14 +190,15 @@ ul {
   .two .left {
     flex-direction: column;
     justify-content: center; }
-  .two .right .about-container {
+  .two .right {
     display: flex;
-    align-items: center;
-    padding: 30px; }
-    .two .right .about-container p {
-      border-left: 1px solid white;
-      padding-left: 60px;
-      color: #dbe9ee; }
+    align-items: center; }
+    .two .right .about-container {
+      display: flex;
+      align-items: center;
+      height: 200px; }
+      .two .right .about-container p {
+        color: #dbe9ee; }
 
 /*///////////////// Section three */
 .three .left {
@@ -335,8 +337,7 @@ ul {
   font-size: 20px;
   font-family: 'Lora', serif;
   text-transform: lowercase;
-  z-index: 2;
-  height: 50px; }
+  z-index: 2; }
 
 .slidingVertical span {
   animation: topToBottom 4.5s linear infinite 0s;
