@@ -86,21 +86,22 @@ ul {
   transition: 0.4s;
 }
 
-.active .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-  background-color: white;
+.active {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: white;
+  }
+  .bar2 {
+    opacity: 0;
+  }
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: white;
+  }
 }
 
-.active .bar2 {
-  opacity: 0;
-}
-
-.active .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-  background-color: white;
-}
 
 /*///////////////// General section */
 
@@ -115,37 +116,38 @@ ul {
 
 .title {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  z-index: 2;
-  left: 0;
-  right: 0;
-  margin: auto;
   line-height: 90px;
   font-size: 120px;
   font-family: 'Khula', sans-serif;
   text-transform: uppercase;
+  align-items: baseline;
 }
 .title-box {
   height: 500px;
   z-index: 1;
   height: 100%;
   display: flex;
+  padding: 50px;
 }
 
 .title_fullstop{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  align-self: center;
-  margin: 20px 0 0 10px;
   animation: colorchange 10s infinite;
 }
 
 /*///////////////// Section one */
 
 .one {
-
+  .title {
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
   /*///////////////// scroll arrow */
   .scroll {
     z-index: 2;
@@ -241,16 +243,14 @@ ul {
 
   .title {
     color: $pale-blue;
-    max-width: 450px;
-    right: 500px;
-    align-self: center;
   }
   .title-box {
     width: 50%;
     background: $dark-blue;
   }
   .left {
-
+    flex-direction: column;
+    justify-content: center;
   }
   .right {
     .about-container {
@@ -421,6 +421,7 @@ ul {
 /*///////////////// Section six */
 
 .six {
+  display: flex;
   background-color: $dark-blue;
   flex-direction: column;
   justify-content: center;
@@ -432,6 +433,7 @@ ul {
     }
   }
   .contact-container {
+    flex-direction: row;
     .contact {
       width: 120px;
       margin: 40px 0;
@@ -447,16 +449,7 @@ ul {
   font-family: 'Lora', serif;
   text-transform: lowercase;
   z-index: 2;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  max-width: 450px;
-  right: 500px;
-  align-self: center;
+  height: 50px;
 }
 
 .slidingVertical span {
@@ -641,9 +634,11 @@ ul {
 /*///////////////// section six */
 
   .six {
-    .title {
+    .title-box {
       margin-top: 100px;
-      font-size: 65px;
+      .title {
+        font-size: 65px;
+      }
     }
   }
 }
